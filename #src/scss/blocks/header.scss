@@ -1,0 +1,37 @@
+.header {
+  background: $blue1;
+
+  &__rewards {
+    background: $red;
+    text-align: center;
+    height: 30px;
+    @include fonts(18px, 16px, 400);
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 77px;
+  }
+
+  &__date-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__date {
+    @include fonts(15px, 13px, 500);
+    color: $white2;
+  }
+
+  &__flag {
+    margin-left: 8px;
+  }
+}
