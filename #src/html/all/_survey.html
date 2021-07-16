@@ -1,7 +1,7 @@
 <section class="survey">
    <div class="container">
       <div class="survey__body">
-         <div class="survey__content">
+         <div class="survey__content firstScreen">
             <h1 class="survey__main-title">Congratulations Rewarded Web Shopper Survey!</h1>
             <div class="survey__text-wrapper">
                <p class="survey__text">RWS Survey conduct the research survey in order to matching best offers for you.
@@ -14,19 +14,58 @@
             <p class="survey__offer-date">This offer is available for today only: <span
                   class="survey__date newDate"></span></p>
 
-            <form action="" class="survey__email-form form">
+            <form action="/success.php" class="survey__email-form form">
                <label for="email" class="form__input-other">
                   <span>E-mail</span>
-                  <input type="email" id="email">
+                  <input class='input' type="email" name="email" id="email" placeholder="Your email..." required>
                </label>
                <p class="form__text">Continuing to fill the form you agree that your e-mail will be used by RWSsurwey
                   and our Partners in order to send you promotional offers</p>
-               <button class="form__button">Let's start survey!</button>
+               <button class="btn">Let's start survey!</button>
             </form>
          </div>
          <div class="survey__image">
             <img src="./img/illustration.png" alt="Congratulations Rewarded Web Shopper Survey!">
          </div>
+         <!-- <div class="survey__question-wrapper question question-one">
+            <div class="question__header">
+               <p class="question__steps">01 <span></span> 08</p>
+               <h1 class="question__title">How often do you shop online?</h1>
+            </div>
+            <form action="/success.php" class="question__choice-form form">
+               <input type="radio" name='radio' id="radio1" data-value='Daily'>
+               <label for="radio1" class="form__radio-btn input">
+                  <span>Daily</span>
+               </label>
+               <input type="radio" name='radio' id="radio2" data-value='Once in 2-3 days'>
+               <label for="radio2" class="form__radio-btn input">
+                  <span>Once in 2-3 days</span>
+               </label>
+               <input type="radio" name='radio' id="radio3" data-value='Weekly'>
+               <label for="radio3" class="form__radio-btn input">
+                  <span>Weekly</span>
+               </label>
+               <input type="radio" name='radio' id="radio4" data-value='Monthly'>
+               <label for="radio4" class="form__radio-btn input">
+                  <span>Monthly</span>
+               </label>
+               <input type="radio" name='radio' id="radio5" data-value='Once in 2-3 months'>
+               <label for="radio5" class="form__radio-btn input">
+                  <span>Once in 2-3 months</span>
+               </label>
+               <input type="radio" name='radio' id="radio6" data-value="When I'm free">
+               <label for="radio6" class="form__radio-btn input">
+                  <span>When I'm free</span>
+               </label>
+               <input type="radio" name='radio' id="radio7" data-value='Other'>
+               <label for="radio7" class="form__radio-btn input">
+                  <span>Other</span>
+               </label>
+               <input type="text" name='otheText' placeholder="please specify" class="form__input input">
+
+               <button class="form__button btn">NEXT</button>
+            </form>
+         </div> -->
       </div>
    </div>
 </section>

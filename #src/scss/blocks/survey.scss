@@ -1,0 +1,149 @@
+.survey {
+   &__body {
+      display: flex;
+      gap: 50px;
+      padding: 88px 0 120px;
+   }
+
+   &__content {
+      flex: 0 0 480px;
+   }
+
+   &__main-title {
+      @include fonts(46px, 50.6px, 400);
+      color: $red;
+      font-family: "Russo One", sans-serif;
+   }
+
+   &__text-wrapper {
+      margin: 30px 0;
+   }
+
+   &__text {
+      @include fonts(18px, 25.2px, 500);
+      color: $black;
+
+      &:not(:last-child) {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__offer-date {
+      color: $grey2;
+      @include fonts(16px, 22.4px, 500);
+   }
+
+   &__date {
+      margin-left: 8px;
+      color: $black;
+   }
+
+   &__email-form {
+      margin-top: 40px;
+   }
+
+   &__image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+}
+
+.form {
+   &__input-other {
+      display: flex;
+      flex-direction: column;
+
+      span {
+         margin-bottom: 5px;
+         @include fonts(12px, 10.8px, 400);
+      }
+
+      input {
+         height: 60px;
+         margin-bottom: 16px;
+      }
+   }
+
+   &__text {
+      color: $grey2;
+      @include fonts(13px, 18.2px, 500);
+      margin-bottom: 30px;
+   }
+
+   &__radio-btn {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &::after {
+         position: absolute;
+         content: "";
+         border: 1px solid $black2;
+         background: transparent;
+         border-radius: 50%;
+         width: 18px;
+         height: 18px;
+         left: 20px;
+         top: 50%;
+         transform: translateY(-50%);
+      }
+
+      span {
+         margin-left: 42px;
+      }
+   }
+
+   &__input {
+      display: none;
+
+      &.show {
+         display: block;
+      }
+   }
+
+   &__button {
+      margin-top: 45px;
+      max-width: 175px;
+   }
+}
+
+.question {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   width: 100%;
+
+   &__header {
+      flex: 0 0 50%;
+   }
+
+   &__steps {
+      @include fonts(16px, 21px, 400);
+      color: $black2;
+
+      span {
+         display: inline-block;
+         width: 60px;
+         height: 1px;
+         background: $black2;
+         vertical-align: middle;
+         margin: 0 10px;
+      }
+   }
+
+   &__title {
+      margin-top: 35px;
+      max-width: 420px;
+      @include fonts(36px, 43.2px, 400);
+      color: $red;
+      font-family: "Russo One", sans-serif;
+   }
+
+   &__choice-form {
+      max-width: 460px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+   }
+}

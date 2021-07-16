@@ -59,10 +59,6 @@ img {
   height: auto;
 }
 
-input {
-  cursor: pointer;
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus input:-webkit-autofill,
@@ -94,78 +90,55 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-input,
-textarea {
-  border-radius: 50px;
-  background: $white;
-  resize: none;
-  padding: 30px 25px;
+.input {
+  border-radius: 14px;
+  max-width: 460px;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
   color: $black;
-  @include content-text;
-  border: 1px solid transparent;
+  @include fonts(18px, 16.2px, 400);
+  border: 1px solid $grey2;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 
   &::placeholder {
-    color: $black;
-    @include content-text;
+    color: $grey2;
+    @include fonts(18px, 16.2px, 400);
   }
 
   &:focus-visible {
     outline: none;
-    border: 1px solid $grey2;
+    border: 1px solid $black;
     color: $black;
   }
 }
-.checkbox {
-  position: relative;
-  cursor: pointer;
 
-  &__check {
-    left: 0px;
-    bottom: 29%;
-    opacity: 0;
-    position: absolute;
-    z-index: 100;
-    width: 100px;
-    height: 20px;
-  }
-
-  &__box {
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    border: 1px solid $black;
-    border-radius: 5px;
-    margin-top: 25px;
-  }
-
-  &__text {
-    @include fonts(14px, 16px, 400);
-    color: $black2;
-    padding-left: 30px;
-    display: inline-block;
-    text-align: initial;
-    margin-top: 20px;
-  }
+input[type="radio"] {
+  appearance: none;
 }
 
-input[type="checkbox"]:checked + .checkbox__box {
-  background: url("../img/check.svg") no-repeat center/contain;
-  border: 1px solid $blue1;
-}
-
-input[type="radio"]:checked + .form__circle {
-  border: 1px solid $blue1;
+input[type="radio"]:checked + .input {
+  background: $pink2;
 
   &::after {
+    border: 1px solid $red;
+  }
+
+  &::before {
     position: absolute;
-    content: "";
-    background: $blue1;
+    content: '';
+    background: $red;
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    left: 50%;
+    left: 24px;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
   }
 }
 
@@ -213,82 +186,35 @@ $md4: 479.98;
   }
 }
 
-.content-padding {
-  @include content-padding;
-}
-
-.title {
-  @include main-title;
-  color: $blue2;
-  margin-bottom: 80px;
+.btn {
+  font-family: "Russo One", sans-serif;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  background: $red;
+  color: $white;
+  text-transform: uppercase;
+  @include fonts(16px, 14.4px, 400);
+  padding: 0 108px 0 20px;
+  border-radius: 14px;
   position: relative;
-  z-index: 0;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 
   &::before {
     position: absolute;
-    content: "";
-    color: transparent;
-    -webkit-text-stroke: 0.5px $green;
-    -moz-text-stroke: 0.5px $green;
-    -ms-text-stroke: 0.5px $green;
-    left: 3px;
-    top: 2px;
-    z-index: -1;
+    content: url("../img/ico_arrow.svg");
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
-}
-
-@supports (-webkit-text-stroke: 1px $blue2) {
-  .title__transperent {
-    display: block;
-    margin: 10px 0 0 145px;
-    color: transparent;
-    -webkit-text-stroke: 1px $blue2;
-    -moz-text-stroke: 1px $blue2;
-    -ms-text-stroke: 1px $blue2;
-  }
-}
-
-.btn {
-  background: #039ae2;
-  border: 1px solid transparent;
-  @include fonts(18px, 21px, 600);
-  transition: 0.3s;
-  height: 42px;
-  max-width: 220px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  color: $white;
-  transition: all 0.3s ease 0s;
 
   &:hover,
   &:focus {
-    color: $white;
-    background: $blue1;
-    border: 1px solid transparent;
+    background: $red2;
   }
-}
 
-.iti.iti--allow-dropdown {
-  margin-top: 35px;
-
-  input {
-    width: 100%;
-  }
-}
-
-.iti__country-list {
-  z-index: 200;
-}
-
-.iti__flag {
-  background-image: url("../img/flags.png");
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .iti__flag {
-    background-image: url("../img/flags@2x.png");
+  &.disabled {
+    background: $pink;
   }
 }
