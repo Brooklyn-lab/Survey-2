@@ -764,7 +764,7 @@ label.error {
 }
 
 .products__item {
-  background: #D7D7D7;
+  background: #efefef;
   padding: 40px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -842,7 +842,7 @@ label.error {
 
 .products__cost span {
   margin-left: 8px;
-  color: #FA544D;
+  color: #fa544d;
 }
 
 .products__btn {
@@ -855,7 +855,7 @@ label.error {
 }
 
 .comments {
-  background: #FAEDE2;
+  background: #faede2;
   padding: 120px 0 110px;
 }
 
@@ -888,7 +888,7 @@ label.error {
 .comments__content {
   max-width: 840px;
   width: 100%;
-  color: #1D252C;
+  color: #1d252c;
 }
 
 .comments__name {
