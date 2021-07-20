@@ -1,6 +1,10 @@
 .thanks-block {
    &__content {
       flex: 0 0 480px;
+
+      @media (max-width: $md2+px) {
+         flex: initial;
+      }
    }
 }
 
@@ -26,6 +30,19 @@
 .products {
    padding: 40px 0 120px;
 
+   @media (max-width: $md3+px) {
+      padding: 0 0 50px;
+   }
+
+   &__body {
+      @media (max-width: $md3+px) {
+         align-items: center;
+         margin: 0 auto;
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
    &__item {
       background: $grey5;
       padding: 40px 60px;
@@ -38,11 +55,33 @@
 
       &:not(:last-child) {
          margin-bottom: 40px;
+
+         @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+         }
+      }
+
+      @media (max-width: $md2+px) {
+         padding: 30px 30px;
+      }
+
+      @media (max-width: $md3+px) {
+         flex-direction: column;
+         max-width: 540px;
+         padding: 30px 40px;
+      }
+
+      @media (max-width: $md4+px) {
+         padding: 15px 10px;
       }
    }
 
    &__image {
       flex: 0 0 50%;
+
+      @media (max-width: $md3+px) {
+         flex: initial;
+      }
 
       img {
          border-radius: 4px;
@@ -52,6 +91,11 @@
 
    &__content {
       flex: 0 0 50%;
+
+      @media (max-width: $md3+px) {
+         flex: initial;
+         margin-top: 15px;
+      }
    }
 
    &__title {
@@ -63,6 +107,10 @@
    &__about {
       @include fonts(15px, 21px, 500);
       margin-bottom: 30px;
+
+      @media (max-width: $md3+px) {
+         margin-bottom: 20px;
+      }
    }
 
    &__reg-price {
@@ -71,9 +119,18 @@
       color: $red;
       margin-bottom: 25px;
 
+      @media (max-width: $md3+px) {
+         margin-bottom: 15px;
+      }
+
       span {
          margin-left: 8px;
          color: $grey2;
+
+         @media (max-width: $md4+px) {
+            display: block;
+            margin-left: 0;
+         }
       }
    }
 
@@ -93,6 +150,10 @@
    &__btn {
       margin-top: 30px;
       max-width: 267px;
+
+      @media (max-width: $md3+px) {
+         margin-top: 25px;
+      }
 
       &::before {
          content: url("../img/ic_round-shopping-cart.svg");

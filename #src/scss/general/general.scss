@@ -183,11 +183,11 @@ $md4: 479.98;
   }
   @media (max-width: $md3+px) {
     max-width: 768px;
-    padding: 0 10px;
   }
 
   @media (max-width: $md4+px) {
     max-width: 410px;
+    padding: 0 10px;
   }
 }
 
@@ -207,6 +207,10 @@ $md4: 479.98;
   cursor: pointer;
   transition: all 0.3s ease 0s;
   margin-top: 60px;
+
+  @media (max-width: $md3+px) {
+    margin-top: 40px;
+ }
 
   &::before {
     position: absolute;
@@ -238,6 +242,11 @@ $md4: 479.98;
   align-items: center;
   gap: 50px;
   padding: 88px 0 120px;
+
+  @media (max-width: $md2+px) {
+    flex-direction: column-reverse;
+    padding: 70px 0;
+  }
 }
 
 .contnt-image {

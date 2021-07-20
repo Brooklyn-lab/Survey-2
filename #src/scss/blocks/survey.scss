@@ -7,6 +7,10 @@
       @include fonts(46px, 50.6px, 400);
       color: $red;
       font-family: "Russo One", sans-serif;
+
+      @media (max-width: $md3+px) {
+         @include fonts(33px, 46px, 400);
+      }
    }
 
    &__text-wrapper {
@@ -38,6 +42,10 @@
 }
 
 .form {
+   @media (max-width: $md3+px) {
+      margin-top: 60px;
+   }
+
    &__input-other {
       display: flex;
       flex-direction: column;
@@ -56,7 +64,7 @@
    &__textarea {
       min-height: 150px;
       max-width: 460px;
-      min-width: 310px;
+      min-width: 300px;
       width: 100%;
    }
 
@@ -106,6 +114,11 @@
    align-items: flex-start;
    width: 100%;
 
+   @media (max-width: $md3+px) {
+      flex-direction: column;
+      align-items: center;
+   }
+
    &__header {
       flex: 0 0 50%;
    }
@@ -125,6 +138,10 @@
       @include fonts(36px, 43.2px, 400);
       color: $red;
       font-family: "Russo One", sans-serif;
+
+      @media (max-width: $md3+px) {
+         margin-top: 25px;
+      }
    }
 
    &__choice-form {
