@@ -1,0 +1,28 @@
+.policy {
+   padding: 100px 0 120px;
+
+   &__body {
+      max-width: 780px;
+      color: $black;
+   }
+
+   &__wrapper {
+      &:first-child {
+         margin-top: 80px;
+      }
+      margin-top: 60px;
+   }
+
+   &__title {
+      margin-bottom: 30px;
+      @include fonts(18px, 25.2px, 500);
+   }
+
+   &__text {
+      @include fonts(16px, 22.4px, 500);
+
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+}

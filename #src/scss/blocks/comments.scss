@@ -1,0 +1,48 @@
+.comments {
+   background: $pink1;
+   padding: 120px 0 110px;
+
+   &__body {
+   }
+
+   &__item {
+      background: $white;
+      border-radius: 8px;
+      padding: 20px 40px;
+      display: flex;
+      align-items: flex-start;
+
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__photo {
+      display: flex;
+      width: 100%;
+      max-width: 60px;
+      height: auto;
+      margin-right: 40px;
+   }
+
+   &__content {
+      max-width: 840px;
+      width: 100%;
+      color: $black1;
+   }
+
+   &__name {
+      @include fonts(18px, 16.2px, 500);
+      margin-bottom: 10px;
+   }
+
+   &__text {
+      @include fonts(15px, 21px, 400);
+      margin-bottom: 15px;
+   }
+
+   &__date {
+      @include fonts(12px, 10.8px, 400);
+      color: $grey6;
+   }
+}

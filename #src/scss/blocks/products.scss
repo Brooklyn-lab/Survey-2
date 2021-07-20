@@ -1,0 +1,101 @@
+.thanks-block {
+   &__content {
+      flex: 0 0 480px;
+   }
+}
+
+.products-step {
+   &__body {
+      margin-top: 30px;
+   }
+
+   &__text {
+      @include fonts(18px, 25.2px, 500);
+
+      span {
+         font-weight: 600;
+         color: $red;
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 15px;
+      }
+   }
+}
+
+.products {
+   padding: 40px 0 120px;
+
+   &__item {
+      background: $grey5;
+      padding: 40px 60px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 15px;
+      border-radius: 8px;
+      border: 1 solid $grey3;
+
+      &:not(:last-child) {
+         margin-bottom: 40px;
+      }
+   }
+
+   &__image {
+      flex: 0 0 50%;
+
+      img {
+         border-radius: 4px;
+         border: 1 solid $grey3;
+      }
+   }
+
+   &__content {
+      flex: 0 0 50%;
+   }
+
+   &__title {
+      @include fonts(18px, 21.6px, 400);
+      font-family: "Russo One", sans-serif;
+      margin-bottom: 15px;
+   }
+
+   &__about {
+      @include fonts(15px, 21px, 500);
+      margin-bottom: 30px;
+   }
+
+   &__reg-price {
+      @include fonts(16px, 19.2px, 400);
+      font-family: "Russo One", sans-serif;
+      color: $red;
+      margin-bottom: 25px;
+
+      span {
+         margin-left: 8px;
+         color: $grey2;
+      }
+   }
+
+   &__cost {
+      @include fonts(15px, 21px, 500);
+
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+
+      span {
+         margin-left: 8px;
+         color: $red1;
+      }
+   }
+
+   &__btn {
+      margin-top: 30px;
+      max-width: 267px;
+
+      &::before {
+         content: url("../img/ic_round-shopping-cart.svg");
+      }
+   }
+}

@@ -1,21 +1,13 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
 $email = htmlspecialchars($_POST["email"]);
-
-// $personalized = htmlspecialchars($_POST["personalized"]);
-// $name = htmlspecialchars($_POST["name"]);
-// $idNumber = htmlspecialchars($_POST["idNumber"]);
-// $birthDate = htmlspecialchars($_POST["birthDate"]);
-// $credits = htmlspecialchars($_POST["credits"]);
-// $employment = htmlspecialchars($_POST["employment"]);
-// $preTax = htmlspecialchars($_POST["preTax"]);
-// $telephone = htmlspecialchars($_POST["telephone"]);
+$shopOn = htmlspecialchars($_POST["inputValue"]);
+$shopOnOther = htmlspecialchars($_POST["otherTextValue"]);
 
 $refferer = getenv('HTTP_REFERER');
 $date=date("d.m.y"); // число.месяц.год  
 $time=date("H:i"); // часы:минуты:секунды 
 // $myemail = "funfot@ya.ru"; // e-mail администратора
-
 
 // Отправка письма администратору сайта
 
@@ -32,7 +24,6 @@ $time=date("H:i"); // часы:минуты:секунды
 
 // mail($myemail, $tema, $message_to_myemail, "From: Sitename <reg@wayup.in> \r\n Reply-To: Sitename \r\n"."MIME-Version: 1.0\r\n"."Content-type: text/html; charset=utf-8\r\n" );
 
-
 // Отправка письма пользователю
 
 // $tema = "Тема письма клиенту";
@@ -44,15 +35,28 @@ $time=date("H:i"); // часы:минуты:секунды
 // $myemail = $email;
 // mail($myemail, $tema, $message_to_myemail, "From: Sitename <reg@wayup.in> \r\n Reply-To: Sitename \r\n"."MIME-Version: 1.0\r\n"."Content-type: text/html; charset=utf-8\r\n" );
 
-
 // Сохранение инфо о лидах в файл leads.xls
 
-$f = fopen("leads.xls", "a+");
-fwrite($f," <tr>");    
-fwrite($f," <td>$email</td> <td>$date / $time</td>");   
-fwrite($f," <td>$refferer</td>");    
-fwrite($f," </tr>");  
-fwrite($f,"\n ");    
-fclose($f);
-
+if (!empty($email)) {
+   $d = fopen("leads.xls", "a+");
+   fwrite($d," <tr>");     
+   fwrite($d," <td>$email</td> <td>$refferer</td> <td>$date / $time</td>"); 
+   fwrite($d," </tr>");  
+   fwrite($d,"\n ");    
+   fclose($d);
+} elseif (empty($email) && $shopOn !== 'Other') {
+   $d = fopen("leads.xls", "a+");
+   fwrite($d," <tr>");     
+   fwrite($d," <td>$shopOn</td> <td>$date / $time</td>"); 
+   fwrite($d," </tr>");  
+   fwrite($d,"\n ");    
+   fclose($d);
+} elseif ($shopOn === 'Other') {
+   $d = fopen("leads.xls", "a+");
+   fwrite($d," <tr>");     
+   fwrite($d," <td>$shopOn</td> <td>$shopOnOther</td> <td>$date / $time</td>"); 
+   fwrite($d," </tr>");  
+   fwrite($d,"\n ");    
+   fclose($d);
+}
 ?>
