@@ -40,8 +40,9 @@
       margin-top: 40px;
    }
 }
-
 .form {
+   position: relative;
+
    @media (max-width: $md3+px) {
       margin-top: 60px;
    }
@@ -104,6 +105,7 @@
       }
    }
 }
+
 .email-form-button {
    margin-top: 45px;
    max-width: 321px;

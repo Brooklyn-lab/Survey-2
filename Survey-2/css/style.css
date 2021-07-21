@@ -231,14 +231,23 @@ input[type="radio"]:checked + .input::before {
 
 label {
   cursor: pointer;
+  position: relative;
 }
 
+#error,
 label.error {
-  margin-top: 5px;
   color: #fd2e62;
-  font-size: 14px;
-  line-height: 114.28571%;
+  font-size: 12px;
+  line-height: 133.33333%;
   font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}
+
+#error {
+  bottom: 105px;
 }
 
 .container {
@@ -521,6 +530,10 @@ label.error {
 
 .survey__email-form {
   margin-top: 40px;
+}
+
+.form {
+  position: relative;
 }
 
 .form__input-other {
