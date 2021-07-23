@@ -39,6 +39,12 @@
    &__email-form {
       margin-top: 40px;
    }
+
+   &__image {
+      @media (max-width: $md2+px) {
+         display: none;
+      }
+   }
 }
 .form {
    position: relative;
@@ -182,6 +188,10 @@
 
       &::-webkit-progress-value {
          background: $red;
+      }
+
+      @media (max-width: $md2+px) {
+         max-width: initial;
       }
    }
 

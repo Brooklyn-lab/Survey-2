@@ -645,7 +645,7 @@ jQuery(document).ready(function () {
          <div class="submit__progress">
             <div>
                <p>Submitting answers.. <span id='progressNumber'></span></p>
-               <progress class="submit__progress-bar" id="progressBar" value="20" max="100"></progress>
+               <progress class="submit__progress-bar" id="progressBar" value="0" max="100"></progress>
             </div>
             <div class="submit__process">
                <div class="submit__process-item">
@@ -728,7 +728,6 @@ jQuery(document).ready(function () {
    }
 
    const Up = () => {
-      console.log(1)
       $('body,html').animate({ scrollTop: top }, 150);
    }
    Up()
@@ -792,7 +791,7 @@ jQuery(document).ready(function () {
             break
       }
    }
-
+   
    // ------------------------------------------------
 
    content.on('click', 'button', function (e) {

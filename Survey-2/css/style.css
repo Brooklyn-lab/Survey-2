@@ -1036,6 +1036,14 @@ label.error {
     padding: 70px 0;
   }
 
+  .survey__image {
+    display: none;
+  }
+
+  .submit__progress-bar {
+    max-width: initial;
+  }
+
   .thanks-block__content {
     -webkit-box-flex: initial;
         -ms-flex: initial;
