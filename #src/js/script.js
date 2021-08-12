@@ -4,6 +4,19 @@ $(window).on('load', function () {
 
 jQuery(document).ready(function () {
 
+   // ---------------- PIXEL -----------------------
+   function addTrackingPixel() {
+      let params = new URLSearchParams(document.location.search.substring(1));
+      let t = params.get("t");
+
+      let pixel = document.createElement("iframe");
+      pixel.setAttribute("src", `https://cd-cont.com/p.ashx?o=108170&e=1002535&a=8934&f=if&t=TRANSACTION_ID&r=${t}`);
+      pixel.setAttribute("height", "1");
+      pixel.setAttribute("width", "1");
+      pixel.setAttribute("frameborder", "0");
+      document.body.appendChild(pixel);
+   }
+
    //----Format Webp---------ъ
    function testWebP(callback) {
       let webP = new Image();
@@ -59,16 +72,6 @@ jQuery(document).ready(function () {
       question6_other = '',
       question7 = '',
       question7_other = '',
-   }
-
-   // ---------------- PIXEL -----------------------
-   function addTrackingPixel() {
-      let pixel = document.createElement("iframe");
-      pixel.setAttribute("src", "https://cd-cont.com/p.ashx?o=108170&e=1002535&a=8934&f=if&t=TRANSACTION_ID");
-      pixel.setAttribute("height", "1");
-      pixel.setAttribute("width", "1");
-      pixel.setAttribute("frameborder", "0");
-      document.body.appendChild(pixel);
    }
 
    const inspectionProducts = () => {
@@ -692,573 +695,642 @@ jQuery(document).ready(function () {
       </section>
 
       <section class="products">
-         <div class="container">
-            <div class="products__body">
-               <article class="products__item electronics">
-                  <div class="products__image">
-                     <img src="./img/offers/iPad.jpg" width="460" height="320" alt="iPad Pro">
+      <div class="container">
+         <div class="products__body">
+            <article class="products__item electronics">
+               <div class="products__image">
+                  <div class='discount'>
+                     <img src="./img/discount_2.png" width="152" height="152" alt="TRY TO WIN">
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Become a winner of iPad Pro + Magic Keyboard + Apple TV+ 12 Months</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$19.73</span></p>
-                        <p class="products__cost">Left in Stock: <span>(7)</span></p>
-                        <a href="https://extload.com/?a=95408&c=234490&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
+                  <img src="./img/offers/iPad.jpg" width="460" height="320" alt="iPad Pro">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Become a winner of iPad Pro + Magic Keyboard + Apple TV+ 12 Months</p>
                   </div>
-               </article>
-      
-               <article class="products__item electronics">
-                  <div class="products__image">
-                     <img src="./img/offers/iPhone.jpg" width="460" height="320" alt="iPhone">
+                  <div class="products__footer">
+                     <p class="products__cost">Left in Stock: <span>(7)</span></p>
+                     <a href="https://extload.com/?a=95408&c=234490&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Become a winner of iPhone 12 Pro</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$19.47</span></p>
-                        <p class="products__cost">Left in Stock: <span>(5)</span></p>
-                        <a href="https://cldrck.com/?a=95408&c=256196&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
+               </div>
+            </article>
+   
+            <article class="products__item electronics">
+               <div class="products__image">
+               <div class='discount'>
+                  <img src="./img/discount_2.png" width="152" height="152" alt="TRY TO WIN">
+               </div>
+                  <img src="./img/offers/iPhone.jpg" width="460" height="320" alt="iPhone">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Become a winner of iPhone 12 Pro</p>
                   </div>
-               </article>
-      
-               <article class="products__item electronics">
-                  <div class="products__image">
-                     <img src="./img/offers/mac_book.jpg" width="460" height="320" alt="MacBook">
+                  <div class="products__footer">
+                     <p class="products__cost">Left in Stock: <span>(5)</span></p>
+                     <a href="https://cldrck.com/?a=95408&c=256196&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Become a winner of MacBook Pro</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$19.47</span></p>
-                        <p class="products__cost">Left in Stock: <span>(4)</span></p>
-                        <a href="https://cldrck.com/?a=95408&c=268652&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
+               </div>
+            </article>
+   
+            <article class="products__item electronics">
+               <div class="products__image">
+               <div class='discount'>
+                  <img src="./img/discount_2.png" width="152" height="152" alt="TRY TO WIN">
+               </div>
+                  <img src="./img/offers/mac_book.jpg" width="460" height="320" alt="MacBook">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Become a winner of MacBook Pro</p>
                   </div>
-               </article>
-      
-               <article class="products__item electronics">
-                  <div class="products__image">
-                     <img src="./img/offers/iMac.jpg" width="460" height="320" alt="iMac">
+                  <div class="products__footer">
+                     <p class="products__cost">Left in Stock: <span>(4)</span></p>
+                     <a href="https://cldrck.com/?a=95408&c=268652&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Become a winner of iMac Yellow</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$19.47</span></p>
-                        <p class="products__cost">Left in Stock: <span>(5)</span></p>
-                        <a href="https://cldrck.com/?a=95408&c=268655&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
+               </div>
+            </article>
+   
+            <article class="products__item electronics">
+               <div class="products__image">
+               <div class='discount'>
+                  <img src="./img/discount_2.png" width="152" height="152" alt="TRY TO WIN">
+               </div>
+                  <img src="./img/offers/iMac.jpg" width="460" height="320" alt="iMac">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Become a winner of iMac Yellow</p>
                   </div>
-               </article>
-      
-               <article class="products__item electronics">
-                  <div class="products__image">
-                     <img src="./img/offers/samsung.jpg" width="460" height="320" alt="Samsung Galaxy S21">
+                  <div class="products__footer">
+                     <p class="products__cost">Left in Stock: <span>(5)</span></p>
+                     <a href="https://cldrck.com/?a=95408&c=268655&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Become a winner of Samsung Galaxy S21 Purple/Blue</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$19.47</span></p>
-                        <p class="products__cost">Left in Stock: <span>(7)</span></p>
-                        <a href="https://cldrck.com/?a=95408&c=253991&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
+               </div>
+            </article>
+   
+            <article class="products__item electronics">
+               <div class="products__image">
+                  <div class='discount'>
+                     <img src="./img/discount_2.png" width="152" height="152" alt="TRY TO WIN">
                   </div>
-               </article>
-      
-               <article class="products__item electronics">
-                  <div class="products__image">
-                     <img src="./img/offers/playstation.jpg" width="460" height="320" alt="PlayStation 5">
+                  <img src="./img/offers/samsung.jpg" width="460" height="320" alt="Samsung Galaxy S21">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Become a winner of Samsung Galaxy S21 Purple/Blue</p>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Become a winner of PlayStation 5</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$19.73</span></p>
-                        <p class="products__cost">Left in Stock: <span>(4)</span></p>
-                        <a href="https://cldrck.com/?a=95408&c=270469&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Left in Stock: <span>(7)</span></p>
+                     <a href="https://cldrck.com/?a=95408&c=253991&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
                   </div>
-               </article>
-               
-               <article class="products__item devices kitchen">
-                  <div class="products__image">
-                     <img src="./img/offers/dyson_v10.jpg" width="460" height="320" alt="Dyson V10">
+               </div>
+            </article>
+   
+            <article class="products__item electronics">
+               <div class="products__image">
+                  <div class='discount'>
+                     <img src="./img/discount_2.png" width="152" height="152" alt="TRY TO WIN">
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Become a winner of Dyson V10</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$19.47</span></p>
-                        <p class="products__cost">Left in Stock: <span>(5)</span></p>
-                        <a href="https://cldrck.com/?a=95408&c=272068&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
+                  <img src="./img/offers/playstation.jpg" width="460" height="320" alt="PlayStation 5">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Become a winner of PlayStation 5</p>
                   </div>
-               </article>
-      
-               <article class="products__item kitchen">
-                  <div class="products__image">
-                     <img src="./img/offers/nespresso.jpg" width="460" height="320" alt="Nespresso">
+                  <div class="products__footer">
+                     <p class="products__cost">Left in Stock: <span>(4)</span></p>
+                     <a href="https://cldrck.com/?a=95408&c=270469&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Become a winner of Nespresso</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$19.47</span></p>
-                        <p class="products__cost">Left in Stock: <span>(9)</span></p>
-                        <a href="https://cldrck.com/?a=95408&c=264462&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
+               </div>
+            </article>
+            
+            <article class="products__item devices kitchen">
+               <div class="products__image">
+                  <div class='discount'>
+                     <img src="./img/discount_2.png" width="152" height="152" alt="TRY TO WIN">
                   </div>
-               </article>
-      
-               <article class="products__item kitchen">
-                  <div class="products__image">
-                     <img src="./img/offers/card1.jpg" width="460" height="320" alt="$500 Apple Store Giftcard">
+                  <img src="./img/offers/dyson_v10.jpg" width="460" height="320" alt="Dyson V10">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Become a winner of Dyson V10</p>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Become a winner of $500 Apple Store Giftcard</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$19.73</span></p>
-                        <p class="products__cost">Left in Stock: <span>(4)</span></p>
-                        <a href="https://cldrck.com/?a=95408&c=226630&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Left in Stock: <span>(5)</span></p>
+                     <a href="https://cldrck.com/?a=95408&c=272068&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
                   </div>
-               </article>
-      
-               <article class="products__item clothing kitchen">
-                  <div class="products__image">
-                     <img src="./img/offers/card2.jpg" width="460" height="320" alt="$500 Costco Giftcard">
+               </div>
+            </article>
+   
+            <article class="products__item kitchen">
+               <div class="products__image">
+                  <div class='discount'>
+                     <img src="./img/discount_2.png" width="152" height="152" alt="TRY TO WIN">
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Become a winner of $500 Costco Giftcard</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$19.73</span></p>
-                        <p class="products__cost">Left in Stock: <span>(4)</span></p>
-                        <a href="https://cldrck.com/?a=95408&c=226630&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
+                  <img src="./img/offers/nespresso.jpg" width="460" height="320" alt="Nespresso">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Become a winner of Nespresso</p>
                   </div>
-               </article>
-      
-               <article class="products__item health">
-                  <div class="products__image">
-                     <img src="./img/offers/nutra4.jpg" width="460" height="320" alt="Sophria Skin Cream">
+                  <div class="products__footer">
+                     <p class="products__cost">Left in Stock: <span>(9)</span></p>
+                     <a href="https://cldrck.com/?a=95408&c=264462&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Sophria Skin Cream</p>
-                        <p class="products__about">Brighten Skin's Appearance<br>
-                           Restore Your Radiant, Firmer Skin<br>
-                           Smooth Look of Stubborn Fine Lines</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__reg-price">$0.00 - Pay Only S/H</p>
-                     </div>
-                     <p class="products__cost">Shipping: <span>$4.95</span></p>
-                     <p class="products__cost">Low Stock</p>
-                     <a href="https://nmttrack.com/?a=95408&c=270373&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+               </div>
+            </article>
+   
+            <article class="products__item kitchen">
+               <div class="products__image">
+                  <div class='discount'>
+                     <img src="./img/discount_1.png" width="152" height="152" alt="FREE">
                   </div>
-               </article>
-      
-               <article class="products__item health">
-                  <div class="products__image">
-                     <img src="./img/offers/nutra5.jpg" width="460" height="320" alt="Cogni Brain Max">
+                  <img src="./img/offers/card1.jpg" width="460" height="320" alt="$500 Apple Store Giftcard">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Become a winner of $500 Apple Store Giftcard</p>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Cogni Brain Max</p>
-                        <p class="products__about">Activate your power<br>
-                           Think faster and sharper<br>
-                           Smash targets with Ease<br>
-                           Achieve untold perfomance<br>
-                           Revitalize your whole mind</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__reg-price">$0.00 - Pay Only S/H</p>
-                     </div>
-                     <p class="products__cost">Shipping: <span>$6.95</span></p>
-                     <p class="products__cost">Low Stock</p>
-                     <a href="https://nmttrack.com/?a=95408&c=270374&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  <div class="products__footer">
+                     <p class="products__cost">Left in Stock: <span>(4)</span></p>
+                     <a href="https://cldrck.com/?a=95408&c=226630&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
                   </div>
-               </article>
-      
-               <article class="products__item health">
-                  <div class="products__image">
-                     <img src="./img/offers/nutra1.jpg" width="460" height="320" alt="RL MAX ME">
+               </div>
+            </article>
+   
+            <article class="products__item clothing kitchen">
+               <div class="products__image">
+                  <div class='discount'>
+                     <img src="./img/discount_1.png" width="152" height="152" alt="FREE">
                   </div>
-                  <div class="products__content"> 
-                     <div class="products__header">
-                        <p class="products__title">RL MAX ME</p>
-                        <p class="products__about"><span>Bigger & Long-Lasting Erections</span><br>
-                           Maximum pleasure & intensified orgasms<br>
-                           <span>Surge In Sex Drive & Energy</span><br>
-                           Ramps up stamina & staying power<br>
-                           <span>Increased Sexual Confidence</span><br>
-                           Experience vitality & peak performance</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__reg-price">$0.00 - Pay Only S/H</p>
-                     </div>
-                     <p class="products__cost">Shipping: <span>$4.95</span></p>
-                     <p class="products__cost">6 Offers Remaining</p>
-                     <a href="https://nmttrack.com/?a=95408&c=238258&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  <img src="./img/offers/card2.jpg" width="460" height="320" alt="$500 Costco Giftcard">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Become a winner of $500 Costco Giftcard</p>
                   </div>
-               </article>
-      
-               <article class="products__item health">
-                  <div class="products__image">
-                     <img src="./img/offers/nutra2.jpg" width="460" height="320" alt="Mighty Leaf CBD Oil">
+                  <div class="products__footer">
+                     <p class="products__cost">Left in Stock: <span>(4)</span></p>
+                     <a href="https://cldrck.com/?a=95408&c=226630&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Mighty Leaf CBD Oil</p>
-                        <p class="products__about"><span>RELIEVES</span> CHRONIC PAIN<br>
-                           <span>REDUCES</span> ANXIETY & STRESS<br>
-                           <span>REDUCE</span> JOINT PAIN<br>
-                           <span>COMBAT</span> ADDICTION</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__reg-price">$0.00 - Pay Only S/H</p>
-                     </div>
-                     <p class="products__cost">Shipping: <span>$6.95</span></p>
-                     <p class="products__cost">Low Stock</p>
-                     <a href="https://nmttrack.com/?a=95408&c=238280&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+               </div>
+            </article>
+   
+            <article class="products__item health">
+               <div class="products__image">
+                  <div class='discount'>
+                     <img src="./img/discount_3.png" width="152" height="152" alt="FREE + shipping">
                   </div>
-               </article>
-      
-               <article class="products__item health">
-                  <div class="products__image">
-                     <img src="./img/offers/nutra3.jpg" width="460" height="320" alt="Slim Tone Keto">
+                  <img src="./img/offers/nutra4.jpg" width="460" height="320" alt="Sophria Skin Cream">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Sophria Skin Cream</p>
+                     <p class="products__about">Brighten Skin's Appearance<br>
+                        Restore Your Radiant, Firmer Skin<br>
+                        Smooth Look of Stubborn Fine Lines</p>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Slim Tone Keto</p>
-                        <p class="products__about">BURN FAT FASTER THAN EVER<br>
-                           Doctors, nutritionists, celebrities all know the fat burning benefits of being in ketosis!<br><br>
-                           
-                           BURN FAT FOR ENERGY, NOT CARBST<br>
-                           When your body is in Ketosis, it is burning Fat Cells for energy instead of Carbs!<br><br>
-                           
-                           LOVE THE WAY YOU FEEL!<br>
-                           Burning fat for energy instead of carbs gives your body 225% more energy!</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__reg-price">$0.00 - Pay Only S/H</p>
-                     </div>
-                     <p class="products__cost">Shipping: <span>$6.95</span></p>
-                     <p class="products__cost">Low Stock</p>
-                     <a href="https://nmttrack.com/?a=95408&c=260161&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  <div class="products__price-wrapper">
+                     <p class="products__reg-price">$0.00 - Pay Only S/H</p>
                   </div>
-               </article>
-      
-               <article class="products__item devices">
-                  <div class="products__image">
-                     <img src="./img/offers/amhs_tac_watch_1.jpg" width="460" height="320" alt="TAC Watch">
+                  <p class="products__cost">Shipping: <span>$4.95</span></p>
+                  <p class="products__cost">Left in Stock: <span>Low Stock</span></p>
+                  <a href="https://nmttrack.com/?a=95408&c=270373&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+               </div>
+            </article>
+   
+            <article class="products__item health">
+               <div class="products__image">
+                  <div class='discount'>
+                     <img src="./img/discount_3.png" width="152" height="152" alt="FREE + shipping">
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Free TAC Watch</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__reg-price products__reg-price_old">$79.00 - Pay Only S/H</p>
-                        <p class="products__new-price">free</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$9.97</span></p>
-                        <a href="https://nmttrack.com/?a=95408&c=269399&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
+                  <img src="./img/offers/nutra5.jpg" width="460" height="320" alt="Cogni Brain Max">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Cogni Brain Max</p>
+                     <p class="products__about">Activate your power<br>
+                        Think faster and sharper<br>
+                        Smash targets with Ease<br>
+                        Achieve untold perfomance<br>
+                        Revitalize your whole mind</p>
                   </div>
-               </article>
-      
-               <article class="products__item clothing">
-                  <div class="products__image">
-                     <img src="./img/offers/amhs_tac_watch_2.jpg" width="460" height="320" alt="Tactical Watch">
+                  <div class="products__price-wrapper">
+                     <p class="products__reg-price">$0.00 - Pay Only S/H</p>
                   </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Free Tactical Watch</p>
-                        <p class="products__about">Exclusive + Stylish + Durable</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__new-price">free</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$9.97</span></p>
-                        <p class="products__cost">Left in Stock: <span>(173)</span></p>
-                        <a href="https://nmttrack.com/?a=95408&c=269401&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
-                  </div>
-               </article>
-      
-               <article class="products__item clothing">
-                  <div class="products__image">
-                     <img src="./img/offers/geneva.jpg" width="460" height="320" alt="Geneva Watch">
-                  </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">Free Geneva Watch</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__reg-price products__reg-price_old">$79.00 - Pay Only S/H</p>
-                        <p class="products__new-price">free</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Shipping: <span>$9.97</span></p>
-                        <a href="https://nmttrack.com/?a=95408&c=269880&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
-                  </div>
-               </article>
-      
-               <article class="products__item devices">
-                  <div class="products__image">
-                     <img src="./img/offers/power_volt.jpg" width="460" height="320" alt="PowerVolt">
-                  </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">PowerVolt</p>
-                        <p class="products__about">Retail residential electricity rates (the amount you pay per kilowatt-hour, or ¢/kWh) have sharply risen across the nation: about 27% over the last 3 years.</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__new-price">50% Discount Per Unit</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Free Shipping</p>
-                        <p class="products__cost">Very Low</p>
-                        <a href="https://securetrck-ec.com/?a=95408&c=254959&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
-                  </div>
-               </article>
-      
-               <article class="products__item devices">
-                  <div class="products__image">
-                     <img src="./img/offers/air_co2ntroller.jpg" width="460" height="320" alt="AirCO2ntroller">
-                  </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">AirCO2ntroller</p>
-                        <p class="products__about">High-precision CO2 Monitor with Sensors Made in Britain<br>
-                           Temperature and Humidity Monitor<br>
-                           Shows Measurements Directly on Display<br>
-                           Good/Average/Unhealthy Indicator<br>
-                           Multiple Alerts If Air Quality Deteriorates<br>
-                           Easy to Carry – Home, Office and Car<br>
-                           Flexible Admission – Hang, Magnetic, Table Placement</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__new-price">50% Discount Per Unit</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Free Shipping</p>
-                        <p class="products__cost">Very Low</p>
-                        <a href="https://securetrck-ec.com/?a=95408&c=258459&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
-                  </div>
-               </article>
-      
-               <article class="products__item devices clothing">
-                  <div class="products__image">
-                     <img src="./img/offers/airwatch_active.jpg" width="460" height="320" alt="AirWatch Active">
-                  </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">AirWatch Active</p>
-                        <p class="products__about">Latest Generation Motion Tracking Sensor<br>
-                           Heart Rate and Blood Pressure Monitor<br>
-                           Sleep Monitor and Sedentary Reminder<br>
-                           Activity Tracking (Steps, Calories, Distance)<br>
-                           Multi Sports Detection and Analysis<br>
-                           IP67 Certified Waterproof<br>
-                           Notifications and Reminders (Calls, Messages, Facebook etc.)<br>
-                           Crystal Clear High Definition Display<br>
-                           Up to 10 Days of Battery Life</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__new-price">50% Discount Per Unit</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Free Shipping</p>
-                        <p class="products__cost">Very Low</p>
-                        <a href="https://securetrck-ec.com/?a=95408&c=266857&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
-                  </div>
-               </article>
-      
-               <article class="products__item health">
-                  <div class="products__image">
-                     <img src="./img/offers/kodo.jpg" width="460" height="320" alt="KODO Detox Patches">
-                  </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">KODO Detox Patches</p>
-                        <p class="products__about">All-Natural High-Quality Ingredients<br>
-                           Releases Unwanted Toxins<br>
-                           Increases Your Energy Levels<br>
-                           Reduces Aches, Pains, Headaches, and Tiredness<br>
-                           Relieves Stress and Improves Your Blood Circulation<br>
-                           Improves Weight Loss and Skin Tone<br>
-                           Totally Discreet: Works While You Sleep<br>
-                           Easy-to-Use: Apply Patches One Hour Before Bed-Time</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__new-price">50% Discount Per Unit</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Free Shipping</p>
-                        <p class="products__cost">Very Low</p>
-                        <a href="https://securetrck-ec.com/?a=95408&c=271904&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
-                  </div>
-               </article>
-      
-               <article class="products__item devices">
-                  <div class="products__image">
-                     <img src="./img/offers/mosqi_stop_band.jpg" width="460" height="320" alt="MosqiStop Band">
-                  </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">MosqiStop Band</p>
-                        <p class="products__about">Bestseller Mosquito Repellent Band<br>
-                           Highly Effective Technology with 6 Biological Waves<br>
-                           Up to 240 Hours of Battery Life<br>
-                           No Chemical Additives, No Odor, and No Noise<br>
-                           Safe for Family (Only Affects Flying Insects, Not People)<br>
-                           Perfect for Indoor and Outdoor Activities<br>
-                           Suitable for Babies, Children and Pregnant Women</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__new-price">50% Discount Per Unit</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Free Shipping</p>
-                        <p class="products__cost">Very Low</p>
-                        <a href="https://securetrck-ec.com/?a=95408&c=275301&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
-                  </div>
-               </article>
-      
-               <article class="products__item kitchen">
-                  <div class="products__image">
-                     <img src="./img/offers/roboclean.jpg" width="460" height="320" alt="RoboClean UV">
-                  </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">RoboClean UV</p>
-                        <p class="products__about">The World's First Robot to Vacuum, Mop, and Sterilize<br>
-                           Kills 99,9% of Bad Bacteria and Viruses<br>
-                           Cleans and Mops All Spaces and Surfaces<br>
-                           Humidifier and Aromatherapy Mode<br>
-                           Automatic avoidance of obstacles<br>
-                           Low Noise, High Coverage<br>
-                           Extra Long Battery Time (120 min)</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__new-price">50% Discount Per Unit</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Free Shipping</p>
-                        <p class="products__cost">Very Low</p>
-                        <a href="https://securetrck-ec.com/?a=95408&c=258466&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
-                  </div>
-               </article>
-      
-               <article class="products__item kitchen">
-                  <div class="products__image">
-                     <img src="./img/offers/cool_pro.jpg" width="460" height="320" alt="IceBox">
-                  </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">IceBox</p>
-                        <p class="products__about">Super Fast Air Cooling<br>
-                           Cools and Purifiers the Air<br>
-                           5 Different Speeds<br>
-                           Crystal Clear LCD Display<br>
-                           Lightweight and Easy-to-Carry Around<br>
-                           Sleep Mode to Use During the Night<br>
-                           Ultra Low Noise with 7 Mood Lights<br>
-                           375 ml Water Tank for Extra Long Cooling<br>
-                           Freon Free and Ultra Low Power Consumption</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__new-price">50% Discount Per Unit</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Free Shipping</p>
-                        <p class="products__cost">Very Low</p>
-                        <a href="https://securetrck-ec.com/?a=95408&c=261570&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
-                  </div>
-               </article>
-
-               <article class="products__item clothing">
-                  <div class="products__image">
-                     <img src="./img/offers/dron.jpg" width="460" height="320" alt="DronePro 4K">
-                  </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">DronePro 4K</p>
-                        <p class="products__about">Two Movie Level 4K Cameras (Front and Bottom)
-                        Ultra Wide 120 Degree Lens <br>
-                        Very Compact, Folding and Portable <br>
-                        Professional Level Altitude Hold <br>
-                        One-Key Taking Off, Landing and Return to Starting Point <br>
-                        Gesture Control to Take Pictures and Videos <br>
-                        Real-Life Video Transmission and VR Support <br>
-                        Mobile Control with Extended Battery Life</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__new-price">50% Discount Per Unit</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Free Shipping</p>
-                        <p class="products__cost">Very Low</p>
-                        <a href="https://securetrck-ec.com/?a=95408&c=258488&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
-                  </div>
-               </article>
-
-               <article class="products__item clothing">
-                  <div class="products__image">
-                     <img src="./img/offers/massage_gun.jpg" width="460" height="320" alt="MassageGun Pro">
-                  </div>
-                  <div class="products__content">
-                     <div class="products__header">
-                        <p class="products__title">MassageGun Pro</p>
-                        <p class="products__about">Professional Therapeutic Mini Massage Gun
-                        Ultra Compact and Lightweight (450g / 1lb) <br>
-                        Relieves Muscle Soreness, Pain and Increases Blood Flow <br>
-                        4 Interchangeable Massage Heads Included <br>
-                        Powerful 3200 RPM High Speed Impact <br>
-                        Ultra-Low Noise (45dB) <br>
-                        Long Battery Life (180 minutes)</p>
-                     </div>
-                     <div class="products__price-wrapper">
-                        <p class="products__new-price">50% Discount Per Unit</p>
-                     </div>
-                     <div class="products__footer">
-                        <p class="products__cost">Free Shipping</p>
-                        <p class="products__cost">Very Low</p>
-                        <a href="https://securetrck-ec.com/?a=95408&c=258471&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
-                     </div>
-                  </div>
-               </article>
+                  <p class="products__cost">Shipping: <span>$6.95</span></p>
+                  <p class="products__cost">Left in Stock: <span>Low Stock</span></p>
+                  <a href="https://nmttrack.com/?a=95408&c=270374&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+               </div>
+            </article>
+   
+            <article class="products__item health">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_3.png" width="152" height="152" alt="FREE + shipping">
             </div>
+                  <img src="./img/offers/nutra1.jpg" width="460" height="320" alt="RL MAX ME">
+               </div>
+               <div class="products__content"> 
+                  <div class="products__header">
+                     <p class="products__title">RL MAX ME</p>
+                     <p class="products__about"><span>Bigger & Long-Lasting Erections</span><br>
+                        Maximum pleasure & intensified orgasms<br>
+                        <span>Surge In Sex Drive & Energy</span><br>
+                        Ramps up stamina & staying power<br>
+                        <span>Increased Sexual Confidence</span><br>
+                        Experience vitality & peak performance</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__reg-price">$0.00 - Pay Only S/H</p>
+                  </div>
+                  <p class="products__cost">Shipping: <span>$4.95</span></p>
+                  <p class="products__cost">6 Offers Remaining</p>
+                  <a href="https://nmttrack.com/?a=95408&c=238258&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+               </div>
+            </article>
+   
+            <article class="products__item health">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_3.png" width="152" height="152" alt="FREE + shipping">
+            </div>
+                  <img src="./img/offers/nutra2.jpg" width="460" height="320" alt="Mighty Leaf CBD Oil">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Mighty Leaf CBD Oil</p>
+                     <p class="products__about"><span>RELIEVES</span> CHRONIC PAIN<br>
+                        <span>REDUCES</span> ANXIETY & STRESS<br>
+                        <span>REDUCE</span> JOINT PAIN<br>
+                        <span>COMBAT</span> ADDICTION</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__reg-price">$0.00 - Pay Only S/H</p>
+                  </div>
+                  <p class="products__cost">Shipping: <span>$6.95</span></p>
+                  <p class="products__cost">Left in Stock: <span>Low Stock</span></p>
+                  <a href="https://nmttrack.com/?a=95408&c=238280&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+               </div>
+            </article>
+   
+            <article class="products__item health">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_3.png" width="152" height="152" alt="FREE + shipping">
+            </div>
+                  <img src="./img/offers/nutra3.jpg" width="460" height="320" alt="Slim Tone Keto">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Slim Tone Keto</p>
+                     <p class="products__about">BURN FAT FASTER THAN EVER<br>
+                        Doctors, nutritionists, celebrities all know the fat burning benefits of being in ketosis!<br><br>
+                        
+                        BURN FAT FOR ENERGY, NOT CARBST<br>
+                        When your body is in Ketosis, it is burning Fat Cells for energy instead of Carbs!<br><br>
+                        
+                        LOVE THE WAY YOU FEEL!<br>
+                        Burning fat for energy instead of carbs gives your body 225% more energy!</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__reg-price">$0.00 - Pay Only S/H</p>
+                  </div>
+                  <p class="products__cost">Shipping: <span>$6.95</span></p>
+                  <p class="products__cost">Left in Stock: <span>Low Stock</span></p>
+                  <a href="https://nmttrack.com/?a=95408&c=260161&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+               </div>
+            </article>
+   
+            <article class="products__item devices">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_3.png" width="152" height="152" alt="FREE + shipping">
+            </div>
+                  <img src="./img/offers/amhs_tac_watch_1.jpg" width="460" height="320" alt="TAC Watch">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">TAC Watch</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price green">FREE</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Shipping: <span>$9.97</span></p>
+                     <a href="https://nmttrack.com/?a=95408&c=269399&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
+   
+            <article class="products__item clothing">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_3.png" width="152" height="152" alt="FREE + shipping">
+            </div>
+                  <img src="./img/offers/amhs_tac_watch_2.jpg" width="460" height="320" alt="Tactical Watch">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Tactical Watch</p>
+                     <p class="products__about">Exclusive + Stylish + Durable</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price green">FREE</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Shipping: <span>$9.97</span></p>
+                     <p class="products__cost">Left in Stock: <span>(173)</span></p>
+                     <a href="https://nmttrack.com/?a=95408&c=269401&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
+   
+            <article class="products__item clothing">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_3.png" width="152" height="152" alt="FREE + shipping">
+            </div>
+                  <img src="./img/offers/geneva.jpg" width="460" height="320" alt="Geneva Watch">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">Geneva Watch</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price green">FREE</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Shipping: <span>$9.97</span></p>
+                     <a href="https://nmttrack.com/?a=95408&c=269880&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
+   
+            <article class="products__item devices">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_4.png" width="152" height="152" alt="50% discount">
+            </div>
+                  <img src="./img/offers/power_volt.jpg" width="460" height="320" alt="PowerVolt">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">PowerVolt</p>
+                     <p class="products__about">Retail residential electricity rates (the amount you pay per kilowatt-hour, or ¢/kWh) have sharply risen across the nation: about 27% over the last 3 years.</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price">50% Discount Per Unit</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Free Shipping</p>
+                     <p class="products__cost">Left in Stock: <span>Very Low</span></p>
+                     <a href="https://securetrck-ec.com/?a=95408&c=254959&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
+   
+            <article class="products__item devices">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_4.png" width="152" height="152" alt="50% discount">
+            </div>
+                  <img src="./img/offers/air_co2ntroller.jpg" width="460" height="320" alt="AirCO2ntroller">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">AirCO2ntroller</p>
+                     <p class="products__about">High-precision CO2 Monitor with Sensors Made in Britain<br>
+                        Temperature and Humidity Monitor<br>
+                        Shows Measurements Directly on Display<br>
+                        Good/Average/Unhealthy Indicator<br>
+                        Multiple Alerts If Air Quality Deteriorates<br>
+                        Easy to Carry – Home, Office and Car<br>
+                        Flexible Admission – Hang, Magnetic, Table Placement</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price">50% Discount Per Unit</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Free Shipping</p>
+                     <p class="products__cost">Left in Stock: <span>Very Low</span></p>
+                     <a href="https://securetrck-ec.com/?a=95408&c=258459&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
+   
+            <article class="products__item devices clothing">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_4.png" width="152" height="152" alt="50% discount">
+            </div>
+                  <img src="./img/offers/airwatch_active.jpg" width="460" height="320" alt="AirWatch Active">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">AirWatch Active</p>
+                     <p class="products__about">Latest Generation Motion Tracking Sensor<br>
+                        Heart Rate and Blood Pressure Monitor<br>
+                        Sleep Monitor and Sedentary Reminder<br>
+                        Activity Tracking (Steps, Calories, Distance)<br>
+                        Multi Sports Detection and Analysis<br>
+                        IP67 Certified Waterproof<br>
+                        Notifications and Reminders (Calls, Messages, Facebook etc.)<br>
+                        Crystal Clear High Definition Display<br>
+                        Up to 10 Days of Battery Life</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price">50% Discount Per Unit</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Free Shipping</p>
+                     <p class="products__cost">Left in Stock: <span>Very Low</span></p>
+                     <a href="https://securetrck-ec.com/?a=95408&c=266857&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
+   
+            <article class="products__item health">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_4.png" width="152" height="152" alt="50% discount">
+            </div>
+                  <img src="./img/offers/kodo.jpg" width="460" height="320" alt="KODO Detox Patches">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">KODO Detox Patches</p>
+                     <p class="products__about">All-Natural High-Quality Ingredients<br>
+                        Releases Unwanted Toxins<br>
+                        Increases Your Energy Levels<br>
+                        Reduces Aches, Pains, Headaches, and Tiredness<br>
+                        Relieves Stress and Improves Your Blood Circulation<br>
+                        Improves Weight Loss and Skin Tone<br>
+                        Totally Discreet: Works While You Sleep<br>
+                        Easy-to-Use: Apply Patches One Hour Before Bed-Time</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price">50% Discount Per Unit</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Free Shipping</p>
+                     <p class="products__cost">Left in Stock: <span>Very Low</span></p>
+                     <a href="https://securetrck-ec.com/?a=95408&c=271904&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
+   
+            <article class="products__item devices">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_4.png" width="152" height="152" alt="50% discount">
+            </div>
+                  <img src="./img/offers/mosqi_stop_band.jpg" width="460" height="320" alt="MosqiStop Band">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">MosqiStop Band</p>
+                     <p class="products__about">Bestseller Mosquito Repellent Band<br>
+                        Highly Effective Technology with 6 Biological Waves<br>
+                        Up to 240 Hours of Battery Life<br>
+                        No Chemical Additives, No Odor, and No Noise<br>
+                        Safe for Family (Only Affects Flying Insects, Not People)<br>
+                        Perfect for Indoor and Outdoor Activities<br>
+                        Suitable for Babies, Children and Pregnant Women</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price">50% Discount Per Unit</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Free Shipping</p>
+                     <p class="products__cost">Left in Stock: <span>Very Low</span></p>
+                     <a href="https://securetrck-ec.com/?a=95408&c=275301&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
+   
+            <article class="products__item kitchen">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_4.png" width="152" height="152" alt="50% discount">
+            </div>
+                  <img src="./img/offers/roboclean.jpg" width="460" height="320" alt="RoboClean UV">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">RoboClean UV</p>
+                     <p class="products__about">The World's First Robot to Vacuum, Mop, and Sterilize<br>
+                        Kills 99,9% of Bad Bacteria and Viruses<br>
+                        Cleans and Mops All Spaces and Surfaces<br>
+                        Humidifier and Aromatherapy Mode<br>
+                        Automatic avoidance of obstacles<br>
+                        Low Noise, High Coverage<br>
+                        Extra Long Battery Time (120 min)</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price">50% Discount Per Unit</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Free Shipping</p>
+                     <p class="products__cost">Left in Stock: <span>Very Low</span></p>
+                     <a href="https://securetrck-ec.com/?a=95408&c=258466&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
+   
+            <article class="products__item kitchen">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_4.png" width="152" height="152" alt="50% discount">
+            </div>
+                  <img src="./img/offers/cool_pro.jpg" width="460" height="320" alt="IceBox">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">IceBox</p>
+                     <p class="products__about">Super Fast Air Cooling<br>
+                        Cools and Purifiers the Air<br>
+                        5 Different Speeds<br>
+                        Crystal Clear LCD Display<br>
+                        Lightweight and Easy-to-Carry Around<br>
+                        Sleep Mode to Use During the Night<br>
+                        Ultra Low Noise with 7 Mood Lights<br>
+                        375 ml Water Tank for Extra Long Cooling<br>
+                        Freon Free and Ultra Low Power Consumption</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price">50% Discount Per Unit</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Free Shipping</p>
+                     <p class="products__cost">Left in Stock: <span>Very Low</span></p>
+                     <a href="https://securetrck-ec.com/?a=95408&c=261570&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
+
+            <article class="products__item clothing">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_4.png" width="152" height="152" alt="50% discount">
+            </div>
+                  <img src="./img/offers/dron.jpg" width="460" height="320" alt="DronePro 4K">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">DronePro 4K</p>
+                     <p class="products__about">Two Movie Level 4K Cameras (Front and Bottom)
+                     Ultra Wide 120 Degree Lens <br>
+                     Very Compact, Folding and Portable <br>
+                     Professional Level Altitude Hold <br>
+                     One-Key Taking Off, Landing and Return to Starting Point <br>
+                     Gesture Control to Take Pictures and Videos <br>
+                     Real-Life Video Transmission and VR Support <br>
+                     Mobile Control with Extended Battery Life</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price">50% Discount Per Unit</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Free Shipping</p>
+                     <p class="products__cost">Left in Stock: <span>Very Low</span></p>
+                     <a href="https://securetrck-ec.com/?a=95408&c=258488&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
+
+            <article class="products__item clothing">
+               <div class="products__image">
+               <div class='discount'>
+               <img src="./img/discount_4.png" width="152" height="152" alt="50% discount">
+            </div>
+                  <img src="./img/offers/massage_gun.jpg" width="460" height="320" alt="MassageGun Pro">
+               </div>
+               <div class="products__content">
+                  <div class="products__header">
+                     <p class="products__title">MassageGun Pro</p>
+                     <p class="products__about">Professional Therapeutic Mini Massage Gun
+                     Ultra Compact and Lightweight (450g / 1lb) <br>
+                     Relieves Muscle Soreness, Pain and Increases Blood Flow <br>
+                     4 Interchangeable Massage Heads Included <br>
+                     Powerful 3200 RPM High Speed Impact <br>
+                     Ultra-Low Noise (45dB) <br>
+                     Long Battery Life (180 minutes)</p>
+                  </div>
+                  <div class="products__price-wrapper">
+                     <p class="products__new-price">50% Discount Per Unit</p>
+                  </div>
+                  <div class="products__footer">
+                     <p class="products__cost">Free Shipping</p>
+                     <p class="products__cost">Left in Stock: <span>Very Low</span></p>
+                     <a href="https://securetrck-ec.com/?a=95408&c=258471&s2=((r))&s1=((a))" class="products__btn btn">Claim reward</a>
+                  </div>
+               </div>
+            </article>
          </div>
-      </section>
+      </div>
+   </section>
       
       <section class="comments">
          <div class="container">
@@ -1273,7 +1345,7 @@ jQuery(document).ready(function () {
                         a shot. I have to say, it was really quick and easy! I mean, within a few minutes and just a few
                         simple questions, you're giving me the option to choose between four unbeatable gifts. I don't know
                         how you do it, but I'm all in! Thanks for the teeth whitener, my teeth look fantastic!</p>
-                     <p class="comments__date f1-date">August 3, 2021 at 12:01 am</p>
+                     <p class="comments__date f1-date">August 10, 2021 at 12:01 am</p>
                   </div>
                </div>
                <div class="comments__item">
@@ -1283,7 +1355,7 @@ jQuery(document).ready(function () {
                   <div class="comments__content">
                      <p class="comments__name">Emily Philips</p>
                      <p class="comments__text">I've been bored in quarantine all week, so the survey was quick and easy. I wouldn't mind doing another one :)</p>
-                     <p class="comments__date f2-date">August 1, 2021 at 2:24 pm</p>
+                     <p class="comments__date f2-date">August 7, 2021 at 2:24 pm</p>
                   </div>
                </div>
                <div class="comments__item">
@@ -1293,7 +1365,7 @@ jQuery(document).ready(function () {
                   <div class="comments__content">
                      <p class="comments__name">Katie Webb</p>
                      <p class="comments__text">I had no use for the weight-loss product, and decided to give it to my friend. And believe it or not- she lost like 14 pounds in less than 2 weeks! Now I want the same one for myself!</p>
-                     <p class="comments__date f3-date">July 30, 2021 at 11:55 am</p>
+                     <p class="comments__date f3-date">August 5, 2021 at 11:55 am</p>
                   </div>
                </div>
                <div class="comments__item">
@@ -1303,7 +1375,7 @@ jQuery(document).ready(function () {
                   <div class="comments__content">
                      <p class="comments__name">Julia Stafford</p>
                      <p class="comments__text">I was bored so I did the survey, but I really liked the skin care cream, it worked really well!</p>
-                     <p class="comments__date f4-date">July 26, 2021 at 8:47 am</p>
+                     <p class="comments__date f4-date">August 4, 2021 at 8:47 am</p>
                   </div>
                </div>
                <div class="comments__item">
@@ -1313,7 +1385,7 @@ jQuery(document).ready(function () {
                   <div class="comments__content">
                      <p class="comments__name">Thomas Harber</p>
                      <p class="comments__text">When your five question survey popped up I thought there was no way the rewards were actually valued over $100. That's just being honest. But then I got to the end and got to select it and I thought, 'This is the greatest survey in the history of surveys!' Seriously though, I don't know how the data you collect helps you, or how you can afford to offer such great products, but I'm happy to take them off your hands. Let me know if you need another one done!</p>
-                     <p class="comments__date f5-date">July 21, 2021 at 6:16 pm</p>
+                     <p class="comments__date f5-date">August 2, 2021 at 6:16 pm</p>
                   </div>
                </div>
                <div class="comments__item">
@@ -1323,7 +1395,7 @@ jQuery(document).ready(function () {
                   <div class="comments__content">
                      <p class="comments__name">Roger Wright</p>
                      <p class="comments__text">Alright, so like the other people here, I'm pretty shocked at the choices given when you reach the end of that really short survey. I guess I expected some half-eaten sandwich or used dental floss, haha. Boy, was I wrong. You only asked me like a handful of questions and then you let me choose an e-Cigs kit? Looks like I got the far better end of this deal. Thanks for making it so quick and easy!</p>
-                     <p class="comments__date f6-date">July 20, 2021 at 4:16 pm</p>
+                     <p class="comments__date f6-date">August 1, 2021 at 4:16 pm</p>
                   </div>
                </div>
                <div class="comments__item">
@@ -1333,7 +1405,7 @@ jQuery(document).ready(function () {
                   <div class="comments__content">
                      <p class="comments__name">Liz Brown</p>
                      <p class="comments__text">I haven't taken a multiple choice test since college, so when I saw the survey I had some flashbacks to my school days. Thankfully it was only five easy questions. I was genuinely impressed with the offers as well. When I've seen other surveys on ecommerce sites they usually offer trinkets. These are real products.</p>
-                     <p class="comments__date f7-date">July 18, 2021 at 6:48 pm</p>
+                     <p class="comments__date f7-date">July 30, 2021 at 6:48 pm</p>
                   </div>
                </div>
                <div class="comments__item">
@@ -1343,7 +1415,7 @@ jQuery(document).ready(function () {
                   <div class="comments__content">
                      <p class="comments__name">Barbara Meier</p>
                      <p class="comments__text">All of the products looked great, but none of them really applied to my current needs. What is a girl to do? Well, I decided to order the eCigs to try and help a friend break her smoking habit. So far, so good.</p>
-                     <p class="comments__date f8-date">July 17, 2021 at 17:07</p>
+                     <p class="comments__date f8-date">July 27, 2021 at 17:07</p>
                   </div>
                </div>
             </div>

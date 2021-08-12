@@ -71,6 +71,7 @@
 
    &__image {
       flex: 0 0 50%;
+      position: relative;
 
       @media (max-width: $md3+px) {
          flex: initial;
@@ -113,6 +114,16 @@
       @media (max-width: $md3+px) {
          margin-bottom: 20px;
       }
+   }
+
+   &__price-wrapper {
+      margin-bottom: 10px;
+   }
+
+   &__new-price {
+      color: $green;
+      text-transform: uppercase;
+      @include fonts(16px, 21.79px, 700);
    }
 
    &__reg-price {
@@ -161,4 +172,30 @@
          content: url("../img/ic_round-shopping-cart.svg");
       }
    }
+}
+
+.discount {
+   position: absolute;
+   top: -30px;
+   left: -70px;
+
+   @media (max-width: $md1+px) {
+      width: 90px;
+      height: auto;
+      top: -25px;
+      left: -45px;
+   }
+   @media (max-width: $md2+px) {
+      top: -20px;
+      left: -30px;
+   }
+   @media (max-width: 575px) {
+      left: -20px;
+   }
+}
+
+.green {
+   color: $green;
+   text-transform: uppercase;
+   @include fonts(16px, 21.79px, 700);
 }

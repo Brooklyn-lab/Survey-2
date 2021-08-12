@@ -800,6 +800,7 @@ label.error {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
+  position: relative;
 }
 
 .products__image img {
@@ -835,6 +836,18 @@ label.error {
   -webkit-line-clamp: 3;
   -moz-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.products__price-wrapper {
+  margin-bottom: 10px;
+}
+
+.products__new-price {
+  color: #03e69f;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 136.1875%;
+  font-weight: 700;
 }
 
 .products__reg-price {
@@ -873,6 +886,20 @@ label.error {
 
 .products__btn::before {
   content: url("../img/ic_round-shopping-cart.svg");
+}
+
+.discount {
+  position: absolute;
+  top: -30px;
+  left: -70px;
+}
+
+.green {
+  color: #03e69f;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 136.1875%;
+  font-weight: 700;
 }
 
 .comments {
@@ -1015,6 +1042,13 @@ label.error {
     max-width: 992px;
   }
 
+  .discount {
+    width: 90px;
+    height: auto;
+    top: -25px;
+    left: -45px;
+  }
+
   .footer__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1060,6 +1094,11 @@ label.error {
 
   .products__item {
     padding: 30px 30px;
+  }
+
+  .discount {
+    top: -20px;
+    left: -30px;
   }
 }
 
@@ -1184,6 +1223,12 @@ label.error {
 
   .policy__text {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .discount {
+    left: -20px;
   }
 }
 
